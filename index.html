@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <title>학점계산기</title>
+</head>
+<body onload="init()">
+  <div class="content">
+    <div class="head">
+      <h3>학점계산기</h3>
+      <p>수강 학점을 소수점 단위로 입력할 수 있는 계산기입니다.</p>
+      <hr>
+    </div>
+    <div class="mainInput" onload="mainpage()">
+      <p>성적을 계산하고 싶은 과목 수를 입력해주세요</p>
+      <p class="example">예시: 3학점 5개, 1.5학점 4개</p>
+      <div id="classNumInput"></div>
+      <button type="submit" class="nextBtn" onclick="saveStorage()">다음으로</button>
+    </div>
+  </div>
+</body>
+</html>

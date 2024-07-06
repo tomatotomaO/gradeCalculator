@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <title>학점계산기</title>
+</head>
+<body onload="init()">
+  <div class="content">
+    <div class="head">
+      <h3>학점계산기</h3>
+      <p>학점과 성적을 숫자로 입력해주세요.</p>
+      <hr>
+    </div>
+    <div id="scoreInput"></div>
+    <button type="submit" id="valueBtn" onclick="calculate()">계산하기</button>
+    <div id="averageScore"></div>
+    <button class="nextBtn" onclick="window.location.href='index.html'">처음으로</button>
+  </div>
+</body>
+</html>
