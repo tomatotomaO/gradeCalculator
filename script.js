@@ -3,6 +3,7 @@ let secInput = 3;
 let numList = new Array();
 let classList = new Array();
 let scoreList = new Array();
+document.addEventListener('load',init())
 
 function init() {
     mainInput = 3;
