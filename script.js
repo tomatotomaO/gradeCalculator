@@ -71,26 +71,28 @@ function makeDivF(parentId, childClass, name, ty) {
 function addEvent() {
     document.addEventListener('click', function(event) {
         if (event.target.classList.contains('plus')) {
-            if (window.location.href.endsWith('index.html')) {
-                mainInput++;
-                makeDivF("classNumInput", 'classNum', '강의 개수:', 'cCount');
-            } else if(window.location.href.endsWith('step1.html')) {
+             if(window.location.href.endsWith('step1.html')) {
                 secInput++;
                 makeDivF('scoreInput', 'classValue', '성적:', 'score');
+            }
+            else {
+                mainInput++;
+                makeDivF("classNumInput", 'classNum', '강의 개수:', 'cCount');
             }
         } else if (event.target.classList.contains('minus')) {
             let p = event.target.parentElement;
             if (p && p.parentElement) {
-                if (window.location.href.endsWith('index.html')) {
-                    if (mainInput > 1) {
-                        p.parentElement.removeChild(p);
-                        mainInput--;
-                    }
-                } else {
+                if (window.location.href.endsWith('step1.html')) {
                     if (secInput > 1) {
                         p.parentElement.removeChild(p);
                         secInput--;
                     }
+                    }
+                } else {
+                    
+                    if (mainInput > 1) {
+                        p.parentElement.removeChild(p);
+                        mainInput--;
                 }
                 if (mainInput < 1) mainInput = 1;
                 if (secInput < 1) secInput = 1;
