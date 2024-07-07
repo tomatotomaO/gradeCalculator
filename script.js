@@ -11,11 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
 function init() {
     mainInput = 3;
     secInput = 3;
-    if (window.location.href.endsWith('index.html')) {
-        mainPage();
-    } else {
+    if (window.location.href.endsWith('step1.html')) {
         setScoreInputBox();
         secondPage();
+
+    } else {
+        mainPage();
     }
     addEvent();
 }
