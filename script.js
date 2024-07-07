@@ -1,12 +1,16 @@
-let mainInput = 1;
-let secInput = 1;
-let numList = new Array();
-let classList = new Array();
-let scoreList = new Array();
+let mainInput = 3;
+let secInput = 3;
+let numList = [];
+let classList = [];
+let scoreList = [];
+
+document.addEventListener('DOMContentLoaded', function() {
+    init();
+});
 
 function init() {
-    mainInput = 1;
-    secInput = 1;
+    mainInput = 3;
+    secInput = 3;
     if (window.location.href.endsWith('index.html')) {
         mainPage();
     } else {
@@ -103,14 +107,11 @@ function plusInput() {
     box.appendChild(plus);
 }
 
-
-
 function setScoreInputBox() {
     numList = JSON.parse(localStorage.getItem('numList')) || [];
     classList = JSON.parse(localStorage.getItem('classList')) || [];
     secInput=0;
     numList.forEach((item) => { secInput += parseInt(item) });
-    
 }
 
 function initializeClass() {
@@ -142,7 +143,7 @@ function calculate() {
     let scoreValue = 0;
     for (let i = 0; i < c.length; i++) {
         if (c[i].value && s[i].value) {
-            totalScore += parseFloat(c[i].value) *parseFloat( s[i].value);
+            totalScore += parseFloat(c[i].value) * parseFloat(s[i].value);
             totalClass += parseFloat(c[i].value);
         }
     }
