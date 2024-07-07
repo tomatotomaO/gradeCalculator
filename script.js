@@ -1,13 +1,12 @@
-let mainInput = 3;
-let secInput = 3;
+let mainInput = 1;
+let secInput = 1;
 let numList = new Array();
 let classList = new Array();
 let scoreList = new Array();
-document.addEventListener('load',init())
 
 function init() {
-    mainInput = 3;
-    secInput = 3;
+    mainInput = 1;
+    secInput = 1;
     if (window.location.href.endsWith('index.html')) {
         mainPage();
     } else {
